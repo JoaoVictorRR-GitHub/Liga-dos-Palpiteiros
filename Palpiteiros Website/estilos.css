@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.img_Paralax {
+    height: 300px;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('\Logo.jpg');
+}
+
+
+/* CONFIGURACAO DO HEADER */
+header {
+    top: 0;
+    z-index: 1;
+    display: flex;
+    position: sticky;
+    padding: 25px 10%;
+    align-items: center;
+    background: white;
+    font-family: fantasy;
+
+    a[id="titulo"] {
+        color: coral;
+        font-size: x-large;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    nav[class="opcoes"] {
+        margin-left: auto;
+
+        a {
+            margin: 0px 10px;
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+        a[id="pagAtual"] { color: rgb(78, 228, 78); }
+        a:hover { color: blueviolet; }
+        a:active { color: coral; }
+    }
+}
+
+
+
+/* CONFIGURACAO DA MAIN */
+main {
+    padding: 50px 10%;
+    background: darkcyan;   /* darkslategray */
+}
+
+
+main[id="mainSobre"] {
+    text-align: justify;
+
+    h1 { 
+        color: lightcyan;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px cornflowerblue;
+    }
+
+    section[id="historia"] {
+        line-height: 1.5;
+        font-size: x-large;
+    }
+
+    section[id="organizadores"] {
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+
+        article {
+            width: 15%;
+            
+            img {
+                width: 85%;
+                border-radius: 35%;
+                border: 5px solid rgb(78, 228, 78);
+            }
+            h2 {
+                height: 30px;
+                color: lightcyan;
+                letter-spacing: 2px;
+                word-wrap: break-word;
+                text-shadow: 1px 1px 5px rgb(78, 228, 78);
+            }
+        }
+    }
+}
+
+
+main[id="mainRegras"] {
+    text-align: justify;
+    background: darkgreen;
+
+    h1 { 
+        color: lightcyan;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px cornflowerblue;
+    }
+
+    ol {
+        list-style: none;
+        line-height: 1.5;
+        font-size: large;
+        counter-increment: item;
+
+        > li {
+            display: flex;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            counter-increment: subitem;
+
+            /* --- */
+            left: 30px;
+            margin-right: 30px;
+            position: relative;
+            flex-direction: column;
+            /* --- */
+
+            ul {
+                margin-top: 15px;
+                list-style-type: disc;
+                list-style-position: inside;
+    
+                strong { color:coral; }
+            }
+
+            a {
+                color: lightcyan;
+                text-decoration: none;
+            }
+            a:hover { color: cornflowerblue; }
+            a:active { color: coral; }
+        }
+
+        > li::before {
+            left: -15px;
+            font-weight: bold;
+            /* position: relative; */
+            color: lightcyan;
+            content: counter(item) "." counter(subitem) " ";
+
+            /* --- */
+            left: -45px;
+            position: absolute;
+            /* --- */
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONFIGURACAO DO FOOTER */
+footer {
+    padding: 3% 0px;
+    font-weight: bold;
+    word-spacing: 3px;
+    text-align: center;
+    background: white;
+    letter-spacing: 1px;
+
+    a {
+        text-decoration: none;
+        color: rgb(78, 228, 78);
+    }
+    a:hover {
+        color: blueviolet;
+    }
+    a:active {
+        color: coral;   /* rgb(228, 223, 78) */
+    }
+}
