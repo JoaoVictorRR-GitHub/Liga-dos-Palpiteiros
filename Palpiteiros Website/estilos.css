@@ -93,6 +93,54 @@ main[id="mainSobre"] {
 }
 
 
+/* CONFIGURACAO DO ASIDE */
+aside {
+    top: 15%;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    position: sticky;
+    width: fit-content;
+    background: white;
+    border-radius: 0px 10px 10px 0px;
+
+    ul { display: none; }
+
+    h2 {
+        margin: 3px;
+        cursor: pointer;
+        user-select: none;
+        padding: 15px 5px;
+        font-size: medium;
+        text-align: center;
+        letter-spacing: 10px;
+        border: 2px solid blue;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        border-radius: 0px 10px 10px 0px;
+    }
+}
+aside:hover {
+    opacity: 0.8;
+
+    ul {
+        margin: 5px;
+        display: block;
+        padding: 5px 3px 5px 25px;
+        /* border: 2px solid blue; */
+
+        a {
+            line-height: 1.5;
+            text-decoration: none;
+        }
+        a:hover { color: rgb(78, 228, 78); }
+        a:active { color: coral; }
+    }
+
+    h2 { background-color: cornflowerblue; }
+}
+
+
 main[id="mainRegras"] {
     text-align: justify;
     background: darkgreen;
@@ -136,6 +184,27 @@ main[id="mainRegras"] {
             }
             a:hover { color: cornflowerblue; }
             a:active { color: coral; }
+
+            ol {
+                padding-top: 15px;
+                counter-increment: -item;
+
+                > li {
+                    margin-right: 150px;
+                    counter-increment: subsubitem;
+                }
+                > li::before{
+                    left: -60px;
+                    content: counter(item) "." counter(subitem) "." counter(subsubitem) " ";
+                }
+            }
+
+            img {
+                margin: 20px 0px;
+                align-self: center;
+                border-radius: 20px;
+                box-shadow: 0px 0px 20px gray;
+            }
         }
 
         > li::before {
