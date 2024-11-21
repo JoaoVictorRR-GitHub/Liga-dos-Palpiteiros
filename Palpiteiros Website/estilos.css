@@ -40,7 +40,7 @@ header {
             color: cornflowerblue;
         }
         a[id="pagAtual"] { color: rgb(78, 228, 78); }
-        a:hover { color: blueviolet; }
+        a:hover, a:focus { color: blueviolet; }
         a:active { color: coral; }
     }
 }
@@ -224,8 +224,69 @@ main[id="mainRegras"] {
 
 
 
+main[id="mainLogin"] {
+    background: greenyellow;
 
+    form {
+        width: 40%;
+        display: flex;
+        margin: 0px auto;
+        border: 1px solid;
+        padding: 30px 20px;
+        background: coral;
+        border-radius: 20px;
+        flex-direction: column;
 
+        label, input {
+            font-size: medium;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div {
+            margin-bottom: 20px;
+
+            label {
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px cornflowerblue;
+            }
+            input {
+                width: 100%;
+                margin-top: 5px;
+                padding: 10px 5px;
+                border: 2px solid;
+                border-radius: 5px;
+                box-shadow: 3px 5px;
+                box-sizing: border-box; /* Inclui padding e border no tamanho total. */
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            input:focus {
+                border: 1px;
+                outline: 2px solid gray;
+                box-shadow: 3px 5px green;
+            }
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            /* width: 50%; */
+            margin: 0px auto;
+            margin-top: 15px;
+            font-weight: bold;
+            padding: 10px 15px;
+            letter-spacing: 3px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px;
+        }
+        input[type="submit"]:hover, input[type="submit"]:focus {
+            background: rgb(78, 228, 78);
+            box-shadow: 0px 0px 10px white;
+        }
+        input[type="submit"]:active {
+            background: greenyellow;
+        }
+    }
+}
 
 
 
